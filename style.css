@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  width: 100%;
+  background-color: #007acc;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin-right: 20px;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #e0f7fa;
+  color: #007acc;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  animation: fadeIn 2s ease;
+}
+
+.hero p {
+  font-size: 1.2em;
+  animation: fadeIn 2s ease 0.5s;
+}
+
+/* Music Section with Card */
+.music-section {
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  min-height: 60vh;
+}
+
+.card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  animation: slideUp 1.5s ease;
+}
+
+.card h2 {
+  color: #007acc;
+  margin-bottom: 20px;
+}
+
+.card input[type="file"] {
+  display: block;
+  margin: 15px auto;
+}
+
+.card button {
+  padding: 10px 25px;
+  font-size: 16px;
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.card button:disabled {
+  background-color: #8bbcf5;
+  cursor: not-allowed;
+}
+
+.card p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #007acc;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  color: #ffffff;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+  height: 35px;
+}
+
+.contact-form textarea {
+  height: 70px;
+  resize: none;
+}
+
+.contact-form button {
+  background-color: #ffffff;
+  color: #007acc;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: not-allowed;
+  display: block;
+  margin: 10px auto 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Applying animations */
+.fade-in {
+  animation: fadeIn 2s ease;
+}
+
+.slide-up {
+  animation: slideUp 1.5s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header nav ul li {
+    margin: 0 10px;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+}
+
+
+/* Additional styles for cartoon logo inside card */
+.cartoon-logo {
+  font-size: 3em;
+  margin-bottom: 10px;
+  animation: bounce 1.5s infinite;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
